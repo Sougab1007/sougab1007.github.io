@@ -1,75 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DrFone Toolkit Guide</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pyxaf - Read and Validate Dutch Auditfile Financieel (XAF) in Python</title>
+  <meta name="description" content="Download pyxaf, a zero-dependency Python library to read and validate every version of the Dutch Auditfile Financieel (XAF 4.0, 3.x, CLAIR2, ADF). Streaming, exact Decimal money.">
+  <meta name="keywords" content="accounting, audit, auditfile, auditfile-financieel, belastingdienst, bookkeeping, dutch, general-ledger, netherlands, python, python-library, rgs, saf-t, validation, xaf, xml">
+  <meta name="author" content="pyxaf contributors">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="pyxaf - Read Dutch Audit Files Easily">
+  <meta property="og:description" content="A Python library to read and validate Dutch Auditfile Financieel (XAF) versions. Zero dependencies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Sougab1007/pyxaf">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #212529;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #1a1a2e;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #16213e;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 0.3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    ul, ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(45deg, #ff6b6b, #feca57);
+      color: white !important;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 10px 0;
+      transition: transform 0.2s;
+    }
+    .btn-primary:hover {
+      transform: scale(1.02);
+      text-decoration: none;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; background-color: #f4f7f6;">
+<body>
+  <div class="container">
+    <h1>📘 pyxaf - Read Dutch Audit Files Easily</h1>
+    <p style="font-size: 1.2rem; color: #495057;">Read and validate every version of the Dutch Auditfile Financieel (XAF 4.0, 3.x, CLAIR2, ADF) in Python. Streaming, exact Decimal money, zero dependencies.</p>
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="https://github.com/Sougab1007/pyxaf" class="btn-primary" style="background: linear-gradient(45deg, #ff6b6b, #feca57);">⬇️ Download pyxaf Now</a>
+    </div>
 
-    <h1 style="color: #2c3e50; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px;">📱 DrFone-iOS-Android-Toolkit-Full - Manage your mobile data with ease</h1>
+    <section class="section">
+      <h2>✨ What is pyxaf?</h2>
+      <p>pyxaf is a Python library that helps you read and validate Dutch Auditfile Financieel (XAF) files. These files are used in accounting and bookkeeping in the Netherlands. The library supports all versions: XAF 4.0, 3.x, CLAIR2, and ADF. It is designed to be easy to use, even if you are not a programmer. It works on Windows and other operating systems.</p>
+      <p>With pyxaf, you can open audit files, check if they are valid, and extract financial data. It uses exact Decimal money to avoid rounding errors. It has zero dependencies, meaning you don't need to install extra packages. It also supports streaming, so you can process large files without running out of memory.</p>
+      <p>Audit files are important for Dutch tax and accounting. They contain structured financial information. pyxaf makes it simple to read these files and check that they follow the rules. You can use it for bookkeeping, auditing, or building your own financial tools.</p>
+    </section>
 
-    <div style="text-align: center; margin: 40px 0;">
-        <a href="https://github.com/Sougab1007/DrFone-iOS-Android-Toolkit-Full" style="background-color: #3498db; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Visit this page to download</a>
+    <section class="section">
+      <h2>📂 Key Features</h2>
+      <ul>
+        <li><strong>Supports all XAF versions:</strong> XAF 4.0, 3.x, CLAIR2, ADF.</li>
+        <li><strong>Streaming:</strong> Process large files efficiently without using too much memory.</li>
+        <li><strong>Exact Decimal money:</strong> No rounding errors in financial data.</li>
+        <li><strong>Zero dependencies:</strong> Works with standard Python, no extra packages needed.</li>
+        <li><strong>Validation:</strong> Check if<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pyxaf - Read and Validate Dutch Auditfile Financieel (XAF) in Python</title>
+  <meta name="description" content="Download pyxaf, a zero-dependency Python library to read and validate every version of the Dutch Auditfile Financieel (XAF 4.0, 3.x, CLAIR2, ADF). Streaming, exact Decimal money.">
+  <meta name="keywords" content="accounting, audit, auditfile, auditfile-financieel, belastingdienst, bookkeeping, dutch, general-ledger, netherlands, python, python-library, rgs, saf-t, validation, xaf, xml">
+  <meta name="author" content="pyxaf contributors">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="pyxaf - Read Dutch Audit Files Easily">
+  <meta property="og:description" content="A Python library to read and validate Dutch Auditfile Financieel (XAF) versions. Zero dependencies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Sougab1007/pyxaf">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #212529;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #1a1a2e;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #16213e;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 0.3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    ul, ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(45deg, #ff6b6b, #feca57);
+      color: white !important;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 10px 0;
+      transition: transform 0.2s;
+    }
+    .btn-primary:hover {
+      transform: scale(1.02);
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 pyxaf - Read Dutch Audit Files Easily</h1>
+    <p style="font-size: 1.2rem; color: #495057;">Read and validate every version of the Dutch Auditfile Financieel (XAF 4.0, 3.x, CLAIR2, ADF) in Python. Streaming, exact Decimal money, zero dependencies.</p>
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="https://github.com/Sougab1007/pyxaf" class="btn-primary">⬇️ Download pyxaf Now</a>
     </div>
 
     <section>
-        <h2 style="color: #2980b9;">🛠️ About</h2>
-        <p>This toolkit offers tools for your iOS and Android devices. It simplifies data recovery, file transfers, and system repairs. You can manage your contacts, messages, photos, and videos quickly. The software works on Windows and supports many phone models.</p>
+      <h2>📖 What is pyxaf?</h2>
+      <p>pyxaf is a Python library that helps you read and validate Dutch Auditfile Financieel (XAF) files. These files are used in accounting and bookkeeping in the Netherlands. The library supports all versions: XAF 4.0, 3.x, CLAIR2, and ADF. It is designed to be easy to use, even if you are not a programmer. It works on Windows and other operating systems.</p>
+      <p>With pyxaf, you can open audit files, check if they are valid, and extract financial data. It uses exact Decimal money to avoid rounding errors. It has zero dependencies, meaning you don't need to install extra packages. It also supports streaming, so you can process large files without running out of memory.</p>
+      <p>Audit files are important for Dutch tax and accounting. They contain structured financial information. pyxaf makes it simple to read these files and check that they follow the rules. You can use it for bookkeeping, auditing, or building your own financial tools.</p>
     </section>
 
     <section>
-        <h2 style="color: #2980b9;">📋 System Requirements</h2>
-        <p>Ensure your computer meets these conditions before you start:</p>
-        <ul style="list-style-type: square;">
-            <li>Operating System: Windows 10 or Windows 11.</li>
-            <li>Processor: 1 GHz or faster.</li>
-            <li>RAM: 2 GB or more.</li>
-            <li>Hard Drive Space: 500 MB for installation files.</li>
-            <li>Stable internet connection for downloading the software.</li>
-        </ul>
+      <h2>✨ Key Features</h2>
+      <ul>
+        <li><strong>Supports all XAF versions:</strong> XAF 4.0, 3.x, CLAIR2, and ADF.</li>
+        <li><strong>Streaming:</strong> Process large files efficiently without using too much memory.</li>
+        <li><strong>Exact Decimal money:</strong> No rounding errors in financial data.</li>
+        <li><strong>Zero dependencies:</strong> Works with standard Python, no extra packages needed.</li>
+        <li><strong>Validation:</strong> Check if audit files are correct and complete.</li>
+        <li><strong>Easy to use:</strong> Simple commands to read and extract data.</li>
+        <li><strong>Open source:</strong> Free to use and modify.</li>
+      </ul>
     </section>
 
     <section>
-        <h2 style="color: #2980b9;">🚀 Getting Started</h2>
-        <p>Follow these steps to set up the software on your computer.</p>
-        <ol style="line-height: 2;">
-            <li>Visit the <a href="https://github.com/Sougab1007/DrFone-iOS-Android-Toolkit-Full">official download page</a>.</li>
-            <li>Locate the download button on the page.</li>
-            <li>Save the installer file to your computer.</li>
-            <li>Open the folder where you saved the file.</li>
-            <li>Double-click the file to start the installation.</li>
-            <li>Follow the instructions on your screen.</li>
-        </ol>
+      <h2>🚀 Getting Started</h2>
+      <p>To get started with pyxaf, follow these simple steps:</p>
+      <ol>
+        <li><strong>Visit this link to download the application:</strong> <a href="https://github.com/Sougab1007/pyxaf">https://github.com/Sougab1007/pyxaf</a></li>
+        <li>Download the files from the repository.</li>
+        <li>Make sure you have Python installed on your computer. You can download Python from <a href="https://www.python.org/downloads/">python.org</a>.</li>
+        <li>Follow the instructions in the repository to use pyxaf with your Python projects.</li>
+      </ol>
+      <p>After downloading, you can use pyxaf to open XAF files and check them. The library provides simple tools to read financial data. If you are new to Python, you can start with the examples in the repository.</p>
     </section>
 
     <section>
-        <h2 style="color: #2980b9;">💡 Key Features</h2>
-        <p>This software provides several functions to assist with mobile maintenance:</p>
-        <ul style="list-style-type: circle;">
-            <li>Data Recovery: Restore lost contacts, photos, and messages from your internal memory or SD cards.</li>
-            <li>Phone Transfer: Migrate your data between Android and iOS systems seamlessly.</li>
-            <li>System Repair: Fix common software errors, such as frozen screens or boot loops, without data loss.</li>
-            <li>Backup Management: Create full backups of your mobile device on your Windows computer.</li>
-            <li>File Management: Delete junk files to free up storage space on your smartphone.</li>
-        </ul>
+      <h2>🖥️ System Requirements</h2>
+      <ul>
+        <li><strong>Operating System:</strong> Windows 10 or 11, macOS, or Linux.</li>
+        <li><strong>Python:</strong> Version 3.7 or later.</li>
+        <li><strong>Disk Space:</strong> At least 50 MB free.</li>
+        <li><strong>Internet:</strong> Required for downloading the library.</li>
+        <li><strong>Memory:</strong> 2 GB RAM or more recommended.</li>
+      </ul>
     </section>
 
     <section>
-        <h2 style="color: #2980b9;">🛡️ Safety</h2>
-        <p>This software keeps your data private. It works locally on your machine. We suggest that you back up your files before you start any repair or transfer process. Always use an original USB cable to connect your smartphone to your computer to prevent connection drops.</p>
+      <h2>📚 How to Use pyxaf</h2>
+      <p>Using pyxaf is straightforward. Once you have downloaded and installed it, you can use it in your Python scripts. The library lets you:</p>
+      <ul>
+        <li>Open XAF files from different versions.</li>
+        <li>Validate the structure and content of the files.</li>
+        <li>Extract financial data with exact Decimal precision.</li>
+        <li>Stream large files without loading everything into memory.</li>
+      </ul>
+      <p>You don't need to be an expert programmer. The repository includes examples and documentation to help you get started. If you have basic knowledge of Python, you can use pyxaf to work with Dutch audit files.</p>
     </section>
 
     <section>
-        <h2 style="color: #2980b9;">❓ Frequently Asked Questions</h2>
-        <p><strong>Can I use this on a Mac?</strong> No, this current toolkit works only on Windows.</p>
-        <p><strong>Does this require an internet connection?</strong> You need the internet to download the installer. Most features work offline after installation.</p>
-        <p><strong>What if my device is not detected?</strong> Check that your cable works and that you gave permission on your phone to trust the computer.</p>
+      <h2>❓ Frequently Asked Questions</h2>
+      <p><strong>Do I need to be a programmer to use pyxaf?</strong><br>Basic Python knowledge helps, but pyxaf is designed to be simple. The documentation provides clear examples.</p>
+      <p><strong>Is pyxaf free?</strong><br>Yes, pyxaf is open source and free to use.</p>
+      <p><strong>Can I use pyxaf for commercial purposes?</strong><br>Yes, check the license in the repository for details.</p>
+      <p><strong>What should I do if I have problems?</strong><br>You can open an issue on the GitHub repository for help.</p>
+      <p><strong>Does pyxaf work on Windows?</strong><br>Yes, pyxaf works on Windows, macOS, and Linux.</p>
     </section>
 
-    <footer style="margin-top: 50px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #bdc3c7; padding-top: 20px;">
-        <p>Keywords: android-utility, data-backup, data-recovery, drfone, ios-utility, mobile-management, mobile-toolkit, phone-transfer, premium-features, system-repair</p>
-    </footer>
-
+    <section>
+      <h2>🤝 Support and Community</h2>
+      <p>If you need help or want to contribute, visit the <a href="https://github.com/Sougab1007/pyxaf">pyxaf GitHub repository</a>. You can report bugs, ask questions, and suggest improvements. The community is friendly and welcoming.</p>
+      <p>For more information about Dutch audit files and the XAF standard, you can search online or consult accounting professionals.</p>
+    </section>
+  </div>
 </body>
 </html>
